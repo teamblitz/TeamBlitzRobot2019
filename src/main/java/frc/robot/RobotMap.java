@@ -54,7 +54,6 @@ public class RobotMap {
 	public static TalonSRX frontLeftMotor = new TalonSRX(2); // 2
 	static {
 		frontLeftMotor.configSelectedFeedbackSensor(FeedbackDevice.QuadEncoder, 0, 10);
-		frontLeftMotor.configPeakCurrentLimit(40);
 		//frontLeftMotor.enableCurrentLimit(true);
 		frontLeftMotor.setSensorPhase(true); //Positive velocity corresponds to green light on Talon
 		frontLeftMotor.setInverted(false);
