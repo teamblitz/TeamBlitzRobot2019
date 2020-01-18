@@ -63,18 +63,18 @@ import frc.robot.subsystems.ExampleSubsystem;
   @Override
   public void robotInit() {
     CameraServer.getInstance().startAutomaticCapture();
-    if (RobotManager.isCompetitionRobot()) {
+    // if (RobotManager.isCompetitionRobot()) {
       System.out.println("Competition Robot Initializing");
       Shuffleboard.getTab("Robot")
                   .add("Which Robot?", "Competition")
                   .withSize(1, 1);
-    }
-    else if (RobotManager.isPracticeRobot()) {
-      System.out.println("Practice Robot Initializing");
-      Shuffleboard.getTab("Robot")
-        .add("Which Robot?", "Practice")
-        .withSize(1, 1);
-    }
+    // }
+    // else if (RobotManager.isPracticeRobot()) {
+    //   System.out.println("Practice Robot Initializing");
+    //   Shuffleboard.getTab("Robot")
+    //     .add("Which Robot?", "Practice")
+    //     .withSize(1, 1);
+    // }
     
 
 

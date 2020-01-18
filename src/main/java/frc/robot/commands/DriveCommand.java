@@ -40,7 +40,7 @@ public class DriveCommand extends CommandBase
 			double leftTargetVelocity_UnitsPer100ms;
 			double rightTargetVelocity_UnitsPer100ms;
 		
-			if (RobotManager.isCompetitionRobot()) {
+			// if (RobotManager.isCompetitionRobot()) {
 				maxVelocity = 42; // inches per second
 				turnSpeedReducer = 4.8;
 				velocityConstant = (1440 / (4 * 10) * maxVelocity);
@@ -53,7 +53,7 @@ public class DriveCommand extends CommandBase
 				// RobotMap.frontRightMotor.set(ControlMode.PercentOutput, Robot.oi.xbox.getY());
 				// RobotMap.frontRightMotor.set(ControlMode.Velocity, 0);
 			} 
-			else if (RobotManager.isPracticeRobot()) {
+			// else if (RobotManager.isPracticeRobot()) {
 				// maxVelocity = -42;
 				// turnSpeedReducer = 3;
 				// double velocityConstantRight = (1440 / (4 * 10) * maxVelocity);
@@ -63,8 +63,8 @@ public class DriveCommand extends CommandBase
 				// RobotMap.frontLeftMotor.set(ControlMode.Velocity, leftTargetVelocity_UnitsPer100ms);
 				// RobotMap.frontRightMotor.set(ControlMode.Velocity, rightTargetVelocity_UnitsPer100ms);
 		//		RobotMap.frontRightMotor.set(ControlMode.Velocity, 0);
-			}
-		}
+			// }
+		// }
 
 	@Override
 	protected boolean isFinished()

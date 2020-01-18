@@ -40,8 +40,8 @@ public class RobotMap {
   // public static int rangefinderModule = 1;
 
 	// Robot IDs
-	public static int COMPETITION_ROBOT_DIO_ID = 0;
-	public static int PRACTICE_ROBOT_DIO_ID = 1;
+	public static int COMPETITION_ROBOT_DIO_ID = 1;
+	public static int PRACTICE_ROBOT_DIO_ID = 0;
 
 	// Digital output for Nvidia power control
 	public static int NVIDIA_POWER_CONTROL_DIO_ID = 2;
@@ -54,8 +54,7 @@ public class RobotMap {
 	public static TalonSRX frontLeftMotor = new TalonSRX(2); // 2
 	static {
 		frontLeftMotor.configSelectedFeedbackSensor(FeedbackDevice.QuadEncoder, 0, 10);
-		frontLeftMotor.configPeakCurrentLimit(40);
-		//frontLeftMotor.enableCurrentLimit(true);
+		frontLeftMotor.configPeakCurrentLimit(12);
 		frontLeftMotor.setSensorPhase(true); //Positive velocity corresponds to green light on Talon
 		frontLeftMotor.setInverted(false);
 		frontLeftMotor.configNominalOutputForward(0, 10);
@@ -81,8 +80,7 @@ public class RobotMap {
 	public static TalonSRX frontRightMotor = new TalonSRX(1); // 1
 	static {
 		frontRightMotor.configSelectedFeedbackSensor(FeedbackDevice.QuadEncoder, 0, 10);
-		frontRightMotor.configPeakCurrentLimit(40); //Peak current
-		//frontRightMotor.enableCurrentLimit(true);
+		frontRightMotor.configPeakCurrentLimit(12); //Peak current
 		frontRightMotor.setSensorPhase(true);
 		frontRightMotor.setInverted(false);
 		frontRightMotor.configNominalOutputForward(0, 10);
